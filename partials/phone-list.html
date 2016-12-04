@@ -1,0 +1,54 @@
+
+    <div class="container">
+	  
+      <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-9">
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+          </p>
+          <div class="jumbotron">
+            <h1>Phone cat app</h1>
+            <p>This is an example to show the phone list and detail.</p>
+			
+          </div>
+          <div class="row">
+			
+            <div class="col-xs-6 col-lg-4" ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+              <h2>{{phone.name}}</h2>
+              <p>{{phone.snippet}}</p>
+              <p><a href="#/phones/{{phone.id}}" class="thumb"><img width="50%" height="50%" ng-src="{{phone.imageUrl}}"></a></p>
+              <p><a href="#/phones/{{phone.id}}">{{phone.name}}</a></p>
+			  <div class='price' style='width:100%;background-color:deeppink'>
+				<span class='text' style='margin-left: 5px; font-size: 12px;color: #ffe4ed;'>券后价&nbsp;￥<span class='price'></span></span>
+				<span class='text' style='margin-left: 15px; font-size: 12px;color: #ffe4ed;'><del>原价&nbsp;￥ </del></span>
+				</div>
+			  <p><a class='btn btn-default' target='_blank' href='#' role='button'>领券</a>
+			  <a class='btn btn-default' target='_blank' href='#' role='button'>下单</a></p>
+            </div><!--/.col-xs-6.col-lg-4-->
+          </div><!--/row-->
+        </div><!--/.col-xs-12.col-sm-9-->
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+          <div class="list-group" style="position: fixed;">
+            <a href="#" class="list-group-item active">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+          </div>
+        </div><!--/.sidebar-offcanvas-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2014</p>
+      </footer>
+
+    </div><!--/.container-->
